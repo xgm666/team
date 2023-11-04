@@ -1,7 +1,16 @@
 import pandas as pd
-import smtplib, ssl
+
+import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+
+import tkinter as tk
+from tkinter import filedialog
+
+root = tk.Tk()
+file_path=''
+
+
 notifications = []  # 通知列表 
 # 导入成绩表
 def import_excel(file_path):
@@ -30,15 +39,7 @@ def create_notification(data,student_name1):
     text=text+r"希望您能够对自己的成绩感到满意，并继续保持努力和积极的学习态度。如果您在某些科目上没有达到预期的成绩，不要灰心，这也是学习过程中的一部分。我们鼓励您与您的任课教师或辅导员进行交流，他们将很乐意为您解答任何疑问并提供帮助。请记住，学习是一个持续不断的过程，我们相信您有能力克服困难并取得更大的进步。再次恭喜您，祝您学习进步、事业成功！教务处"
     return text
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
-import tkinter as tk
-from tkinter import filedialog
-
-root = tk.Tk()
-file_path=''
 
 
 

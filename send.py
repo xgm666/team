@@ -22,4 +22,4 @@ def send_notifications(notifications, _email):
         server.sendmail(smtp_username, _email, msg.as_string())
 
         # 关闭SMTP客户端
-        server.quit() #这个可以发邮件，刚才试过了
+        server.quit() 
